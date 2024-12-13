@@ -1,14 +1,8 @@
 ﻿using DineFlow.Data;
-using DineFlow.Models.UserManagement;
 using DineFlow.Services;
 using Microsoft.EntityFrameworkCore;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DineFlow.Tests.Services
 {
@@ -42,7 +36,7 @@ namespace DineFlow.Tests.Services
             Assert.NotNull(user);
             Assert.Equal(email, user.Email);
             Assert.NotNull(user.PasswordHash);
-            Assert.Equal(roleId,user.RoleId);
+            Assert.Equal(roleId, user.RoleId);
             Assert.NotNull(user.Location);
             Assert.Equal(locationId, user.Location.Id);
             Assert.Equal(expectedHash, user.PasswordHash);
