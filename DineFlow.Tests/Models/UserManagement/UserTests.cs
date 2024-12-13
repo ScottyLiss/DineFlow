@@ -25,7 +25,7 @@ namespace DineFlow.Tests.Models.UserManagement
         {
             // Arrange 
             Guid userGuid = Guid.NewGuid();
-            var user = new User() { Email = "testEmail@email.com", Id = userGuid, PasswordHash = "hashPassWord", RoleId = 1};
+            var user = new User() { Email = "testEmail@email.com", Id = userGuid, PasswordHash = "hashPassWord", RoleId = 1 };
 
             // Assert
             Assert.Equal("testEmail@email.com", user.Email);
